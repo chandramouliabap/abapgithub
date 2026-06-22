@@ -1,0 +1,4 @@
+@EndUserText.label: 'yu'
+define service Zsb_kiran_hierarchy {
+  expose ZDEMO_EMPLOYEE_TREE;
+}

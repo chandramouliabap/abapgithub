@@ -1,0 +1,4 @@
+@EndUserText.label: '.'
+define service Zsd_rap_student {
+  expose ZRAP_R_STUDENT;
+}

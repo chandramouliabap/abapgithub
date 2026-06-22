@@ -1,0 +1,30 @@
+@Metadata.layer: #CUSTOMER
+@UI: { headerInfo: { typeName:       'Student',
+                     typeNamePlural: 'Students',
+                     title:       { type: #STANDARD, value: 'Name' },
+                     description: { type: #STANDARD, value: 'Course' } } }
+annotate entity ZRAP_R_STUDENT with
+{
+  @UI.facet: [ { id:       'Student',
+                 purpose:  #STANDARD,
+                 type:     #IDENTIFICATION_REFERENCE,
+                 label:    'Student Details',
+                 position: 10 } ]
+
+  @UI.hidden: true
+  Id;
+
+  @UI: { lineItem: [ { position: 10, importance: #HIGH }
+                      ],
+         identification: [ { position: 10 } ] }
+  Name;
+
+  @UI: { lineItem: [ { position: 20 } ], identification: [ { position: 20 } ] }
+  Location;
+
+  @UI: { lineItem: [ { position: 30 } ], identification: [ { position: 30 } ] }
+  Course;
+
+  @UI: { lineItem: [ { position: 40 } ], identification: [ { position: 40 } ] }
+  Status;
+}

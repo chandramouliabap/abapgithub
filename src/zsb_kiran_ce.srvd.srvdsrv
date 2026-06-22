@@ -1,0 +1,4 @@
+@EndUserText.label: '.'
+define service Zsb_kiran_ce {
+  expose zdemo_custom_entity;
+}

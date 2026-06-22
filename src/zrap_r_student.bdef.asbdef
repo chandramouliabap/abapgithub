@@ -1,0 +1,39 @@
+managed implementation in class zbp_rap_r_student unique;
+strict ( 2 );
+with draft;
+define behavior for ZRAP_R_STUDENT alias Student
+//persistent table zrap_student
+with unmanaged save
+draft table ZRAP_D_STUDENT
+lock master
+total etag  LastChangedAt
+etag master LocalLastChangedAt
+authorization master (instance)
+{
+  create;
+  update;
+  delete;
+
+  field ( readonly, numbering : managed ) Id;
+  field ( readonly ) LastChangedAt, LocalLastChangedAt, CreatedBy, ChangedBy;
+  event studentEnrolled;
+  static action uploadExcel parameter ZRAP_A_FILE_UPLOAD
+                            result [0..*] ZRAP_A_UPLOAD_RESULT;
+  draft action Activate optimized;
+  draft action Discard;
+  draft action Edit;
+  draft action Resume;
+  draft determine action Prepare;
+  mapping for zrap_student
+  {
+    Id                 = id;
+    Name               = name;
+    Location           = location;
+    Course             = course;
+    Status             = status;
+    LastChangedAt      = lastchangedat;
+    LocalLastChangedAt = locallastchangedat;
+    CreatedBy          = createdby;
+    ChangedBy          = changedby;
+  }
+}
