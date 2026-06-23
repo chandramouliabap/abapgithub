@@ -1,5 +1,5 @@
 @EndUserText.label: 'Excel File Upload - Action Parameter'
-define abstract entity ZRAP_A_FILE_UPLOAD
+define root abstract entity ZRAP_A_FILE_UPLOAD
 {
   @EndUserText.label: 'Excel File'
   @Semantics.largeObject: { mimeType: 'MimeType',

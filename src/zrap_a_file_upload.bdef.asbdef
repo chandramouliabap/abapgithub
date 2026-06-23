@@ -1,0 +1,7 @@
+abstract;
+strict ( 2 );
+with hierarchy;
+define behavior for ZRAP_A_FILE_UPLOAD with control //alias <alias_name>
+{
+field(mandatory : execute) ExcelFile;
+}

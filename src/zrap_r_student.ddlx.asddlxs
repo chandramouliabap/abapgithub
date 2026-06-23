@@ -13,9 +13,15 @@ annotate entity ZRAP_R_STUDENT with
 
   @UI.hidden: true
   Id;
-
-  @UI: { lineItem: [ { position: 10, importance: #HIGH }
+  @UI: { lineItem: [ { position: 10, importance: #HIGH },
+                     {
+      type: #FOR_ACTION,
+      dataAction: 'uploadExcel1', // Must exactly match the action in the Behavior Definition
+      label: 'Upload Excel',          // Text displayed on the button
+      position: 10                        // Sequence of the button on the toolbar
+    }
                       ],
+
          identification: [ { position: 10 } ] }
   Name;
 

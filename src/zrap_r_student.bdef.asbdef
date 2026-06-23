@@ -19,6 +19,8 @@ authorization master (instance)
   event studentEnrolled;
   static action uploadExcel parameter ZRAP_A_FILE_UPLOAD
                             result [0..*] ZRAP_A_UPLOAD_RESULT;
+    static action uploadExcel1 deep parameter ZRAP_A_DUMMY_CDS
+                            result [0..*] ZRAP_A_UPLOAD_RESULT;
   draft action Activate optimized;
   draft action Discard;
   draft action Edit;
